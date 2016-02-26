@@ -1,0 +1,14 @@
+<h2><%= @current_team.name %></h2>
+
+<h2>Season Schedule</h2>
+
+<ul>
+	<% @current_team.games.each do |game| %>
+		<li><%= "#{game.game_date.to_date}  vs: (Pending)" %></li>
+		<% # "#{Team.find(game.opponents.select("team_id").where.not(team_id: @current_team.id)).name}" %>
+	<% end %>
+</ul>
+
+<h2>Roster</h2>
+
+<p>Also Pending...</p>

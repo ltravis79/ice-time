@@ -1,0 +1,9 @@
+<h2><%= @current_division.name %></h2>
+
+<h2>Available Seasons</h2>
+
+<ul>
+	<% @current_division.seasons.each do |season| %>
+		<li><a href="/leagues/<%= @current_division.league.id %>/divisions/<%= @current_division.id %>/seasons/<%= season.id %>"><%= "#{season.description}" %></a></li>
+	<% end %>
+</ul>
